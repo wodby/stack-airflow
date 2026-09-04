@@ -1,0 +1,34 @@
+name: airflow
+title: Apache Airflow
+icon: airflow
+
+services:
+- name: airflow
+  title: Apache Airflow
+  service: airflow
+  required: true
+  main: true
+  links:
+  - name: postgres
+    service: postgres
+  volumes:
+  - name: data
+    size: 10
+  workloads:
+  - name: main
+    containers:
+    - name: airflow-api-server
+      resources:
+        request:
+          cpu: 200
+          memory: 512
+        limit:
+          cpu: 1000
+          memory: 2048
+- name: postgres
+  title: PostgreSQL
+  service: postgres
+  required: true
+  volumes:
+  - name: data
+    size: 20
