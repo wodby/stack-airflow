@@ -11,6 +11,7 @@ composition for Apache Airflow.
 
 - [Apache Airflow stack on Wodby](https://wodby.com/stacks/airflow)
 - [Browse Wodby application stacks](https://wodby.com/stacks)
+- [Apache Airflow stack guide](https://wodby.com/docs/2.0/stacks/catalog/airflow/)
 - [Wodby stack documentation](https://wodby.com/docs/2.0/stacks/)
 - [Stack manifest reference](https://wodby.com/docs/2.0/stacks/template/)
 
