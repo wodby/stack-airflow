@@ -1,6 +1,7 @@
 name: airflow
 title: Apache Airflow
 icon: airflow
+docs: https://wodby.com/docs/2.0/stacks/catalog/airflow/
 
 services:
 - name: airflow
