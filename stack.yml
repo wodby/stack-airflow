@@ -2,6 +2,11 @@ name: airflow
 title: Apache Airflow
 icon: airflow
 docs: https://wodby.com/docs/2.0/stacks/catalog/airflow/
+# The main stack of the Airflow variants: the catalog shows this next to the
+# link to it on the variants' pages.
+variantDescription: >-
+  Choose this when you manage DAGs on Airflow's data volume yourself: it runs
+  the official Airflow image, with no Git repository to maintain and no builds.
 
 services:
 - name: airflow
