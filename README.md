@@ -1,6 +1,8 @@
 # Apache Airflow application stack for Kubernetes on Wodby
 
-Deploy Apache Airflow applications on Kubernetes with Wodby.
+Deploy Apache Airflow with your own DAGs, plugins and Python packages on
+Kubernetes with Wodby: your Git repository holds them, and Wodby builds Airflow
+with them.
 
 This repository defines the Wodby stack manifests and default service
 composition for Apache Airflow.
@@ -17,7 +19,7 @@ composition for Apache Airflow.
 
 ## Service definitions
 
-- [Apache Airflow service](https://github.com/wodby/service-airflow)
+- [Buildable Apache Airflow service](https://github.com/wodby/service-airflow-buildable)
 - [PostgreSQL service](https://github.com/wodby/service-postgres)
 
 ## What's included
@@ -38,3 +40,26 @@ wodby stack validate-manifest stack.yml --org <org-id>
 ```
 
 <!-- wodby:generated:end -->
+
+## Deploy this stack
+
+Connect a Git repository started from the
+[Airflow boilerplate](https://github.com/wodby/airflow-boilerplate):
+
+- `dags/` holds your DAGs and `plugins/` your plugins.
+- `requirements.txt` lists the Python packages they need, such as providers.
+
+Choose the Airflow version when you create the app. The build starts from the
+official `apache/airflow` image of that version and adds your code and packages;
+the API server, scheduler, DAG processor, triggerer and setup step all run the
+result.
+
+## Maintain a custom version
+
+1. Fork this repository.
+2. Edit the stack manifest.
+3. Import the repository as a [Git-backed stack](https://wodby.com/docs/2.0/stacks/create/#create-a-git-backed-stack).
+
+When replacing or renaming a stack service, update every related link target
+and derivative reference. Stack-local names and referenced service names are
+distinct identifiers.
