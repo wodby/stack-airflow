@@ -19,7 +19,7 @@ composition for Apache Airflow.
 
 ## Service definitions
 
-- [Buildable Apache Airflow service](https://github.com/wodby/service-airflow-buildable)
+- [Apache Airflow service](https://github.com/wodby/service-airflow)
 - [PostgreSQL service](https://github.com/wodby/service-postgres)
 
 ## What's included

@@ -6,7 +6,7 @@ docs: https://wodby.com/docs/2.0/stacks/catalog/airflow/
 services:
 - name: airflow
   title: Apache Airflow
-  service: airflow-buildable
+  service: airflow
   required: true
   main: true
   links:
